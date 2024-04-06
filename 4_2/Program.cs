@@ -26,39 +26,35 @@ class Program
             for (int j = 0; j < col1; j++)
             {
                 matrix1[i, j] = random.Next(10);
-                Write($"{matrix1[i, j]}");
+                Write($" {matrix1[i,j]} ");
             }
             WriteLine();
 
         }
-        Write("Введите количество строк второй матрицы: ");
-        int row2 = int.Parse(ReadLine());
-        Write("Введите количество столбцов второй матрицы: ");
-        int col2 = int.Parse(ReadLine());
-
-        int[,] matrix2 = new int[row2, col2];
+        WriteLine("Значения второй матрицы");
+        int[,] matrix2 = new int[row1, col1];
 
         Random random2 = new Random();
 
-        for (int i = 0; i < row2; i++)
+        for (int i = 0; i < row1; i++)
         {
-            for (int j = 0; j < col2; j++)
+            for (int j = 0; j < col1; j++)
             {
                 matrix2[i, j] = random.Next(10);
-                Write($"{matrix2[i, j]}");
+                Write($" {matrix2[i,j]} ");
             }
 
             WriteLine();
         }
         WriteLine("Значения суммы предыдущих матриц");
 
-        int[,] matrix3 = new int[row2, col2];
-        for (int i = 0; i < row2; i++)
+        int[,] matrix3 = new int[row1, col1];
+        for (int i = 0; i < row1; i++)
         {
-            for (int j = 0; j < col2; j++)
+            for (int j = 0; j < col1; j++)
             {
                 matrix3[i, j] = matrix2[i, j] + matrix1[i, j];
-                Write($"{matrix3[i, j]}");
+                Write($" {matrix3[i,j]} ");
             }
             WriteLine();
         }
